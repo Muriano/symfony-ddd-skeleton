@@ -12,6 +12,7 @@
         "symfony/yaml": "5.1.*"
     },
     "require-dev": {
+        "symfony/maker-bundle": "^1.19"
     },
     "config": {
         "optimize-autoloader": true,
@@ -22,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "apps/web/src/"
         }
     },
     "autoload-dev": {
@@ -58,6 +59,7 @@
         "symfony": {
             "allow-contrib": false,
             "require": "5.1.*"
-        }
+        },
+        "public-dir": "apps/web/public"
     }
 }
