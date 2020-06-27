@@ -5,14 +5,15 @@ MAINTAINER José Antonio Muriano <jamuriano@gmail.com>
 WORKDIR /app
 
 RUN apk --update upgrade && \
-    apk add --no-cache autoconf automake gcc g++ && \
+    apk add --no-cache alpine-sdk autoconf automake gcc g++ icu-dev && \
     pecl install apcu-5.1.18 && \
     pecl install xdebug-2.9.1 && \
-    docker-php-ext-intall -j$(nproc) \
+    docker-php-ext-install -j$(nproc) \
         bcmath \
         opcache \
         intl \
-        pdo-mysql && \
+        pdo \
+        pdo_mysql && \
     docker-php-ext-enable \
         apcu \
         opcache
