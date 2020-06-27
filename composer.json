@@ -1,6 +1,6 @@
 {
     "name": "muriano/ddd-skeleton",
-    "type": "metapackage",
+    "type": "project",
     "license": "MIT",
     "require": {
         "php": "^7.2.5",
